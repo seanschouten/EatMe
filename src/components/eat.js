@@ -48,24 +48,29 @@ export default class Eat extends Component {
 
     render(){
         let filteredMeal = this.state.food.filter((item) => {return item.category == 'meal'})
-        let filteredMealMap = filteredMeal.map((item) => 
-            <div>
+        let filteredMealMap = filteredMeal.map((item) =>{
+            return(
                 <Card key={item.id}
                       item={item}
                       deleteFood={() => this.deleteFood(item.id)}
                       updateFood={this.updateFood}
                       />
-            </div>
+            )
+
+        } 
+            
+    
         )
 
         let filteredSnack = this.state.food.filter((item) => {return item.category == 'snack'})
-        let filteredSnackMap = filteredSnack.map((item) => 
-            <div>
+        let filteredSnackMap = filteredSnack.map((item) =>{
+            return (
                 <Card key={item.id}
                       item={item}
                       deleteFood={() => this.deleteFood(item.id)}
                       updateFood={this.updateFood}/>
-            </div>
+            )
+        } 
         )
 
     
@@ -73,10 +78,12 @@ export default class Eat extends Component {
         return(
         <div className= "container">
             <h1>Eat Me</h1>
-            <h2>Calorie Tracker</h2>
+            <h2>Meal Tracker</h2>
             <AddFoodForm addFood={this.addFood}/>
-            <p> Meals: {filteredMealMap}</p>
-            <p>Snacks: {filteredSnackMap}</p>
+            <p> Meals: </p>
+            <div className='mealCard'>{filteredMealMap}</div>
+            <p>Snacks: </p>
+           <div className='snackCard'>{filteredSnackMap}</div>
         </div>
         )
     }

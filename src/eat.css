@@ -15,14 +15,18 @@
 
 }
 
-h1 {
+.mealCard {
     display: flex;
-    align-items: left;
+    justify-content: space-evenly;
+    width: 35vw;
+    height: 20vh;
+    /* background: green */
+    
 }
 
-h2 {
+.snackCard {
     display: flex;
-    align-items: center;
-
+    justify-content: space-evenly;
+    width: 35vw;
+    height: 20vh;
 }
-

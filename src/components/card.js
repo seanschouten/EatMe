@@ -35,16 +35,23 @@ export default class Card extends Component {
                 <div>{item.food}</div>
                 <div>{item.calories}</div>
                 {/* <button onClick={()=>this.props.updateFood(item.id)}>Update</button> */}
-                <button onClick={()=>this.props.deleteFood(item.id)}>Delete</button>
-
+                {/* <button onClick={()=>this.props.deleteFood(item.id)}>Delete</button> */}
             </div>
                 
             } 
 
         {this.state.edit ?
+            <div>
           <button onClick={this.toggleEdit}>Save</button>
+          <button onClick={()=>this.props.deleteFood(item.id)}>Delete</button>
+
+            </div>
           :
+          <div>
           <button onClick={this.toggleEdit}>Edit</button>
+          <button onClick={()=>this.props.deleteFood(item.id)}>Delete</button>
+
+          </div>
         
         }
 
