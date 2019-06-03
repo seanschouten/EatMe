@@ -9,6 +9,8 @@ app.use(express.json())
 
 app.get('/api/foods', eatCtrl.read)
 app.post('/api/foods', eatCtrl.create)
+app.delete('/api/foods/:id', eatCtrl.delete)
+app.put('/api/foods/:id', eatCtrl.update)
 
 app.listen(port, () => {
   console.log('Listening on port', port)  

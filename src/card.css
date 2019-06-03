@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-items: baseline;
+    
+
+}

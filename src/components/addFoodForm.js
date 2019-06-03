@@ -31,15 +31,13 @@ export default class AddFoodForm extends Component {
 
     }
 
-    // handleMealClick = () => {
-    //     this.setState({})
-    // }
 
 
 
     render(){
         return(
-            <div className='User Input'>
+            <div className='userInput'>
+            <form>
               <label>Food:
                 <input
                     type="text"
@@ -59,6 +57,7 @@ export default class AddFoodForm extends Component {
                     <option value="snack">Snack</option>
                 </select>
                 <button onClick={this.handleClick}>Add</button>
+                </form>
             </div>
         )
     }

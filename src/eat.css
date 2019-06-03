@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #A08CCC;
+    height: 100vh;
+    width: 100vw;
+    color: #45467C;
+    font-family: 'Heebo', sans-serif;
+
+}
+
+h1 {
+    display: flex;
+    align-items: left;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+
+}
+
