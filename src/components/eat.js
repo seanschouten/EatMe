@@ -3,6 +3,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
 import AddFoodForm from './addFoodForm'
+import Header from './header'
+import Footer from './footer'
 import Card from './card'
 import '../eat.css'
 
@@ -77,13 +79,14 @@ export default class Eat extends Component {
 
         return(
         <div className= "container">
-            <h1>Eat Me</h1>
-            <h2>Meal Tracker</h2>
+            <Header/>
+            <h3>Meal Tracker</h3>
             <AddFoodForm addFood={this.addFood}/>
             <p> Meals: </p>
             <div className='mealCard'>{filteredMealMap}</div>
             <p>Snacks: </p>
            <div className='snackCard'>{filteredSnackMap}</div>
+           <Footer />
         </div>
         )
     }
